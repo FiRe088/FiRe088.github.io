@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chandan Suthar — Data Engineer</title>
-<meta name="description" content="Chandan Suthar — Data Engineer specializing in streaming and lakehouse architectures (Kafka, PySpark, Kubernetes, Airflow, dbt), with hands-on systems programming in Go.">
+<title>Chandan Suthar — Software Engineer</title>
+<meta name="description" content="Chandan Suthar — Software Engineer building backend services and distributed systems in Go and Python: REST APIs, microservices, concurrency, profiling, Kubernetes and CI/CD.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,14 +48,14 @@
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="hero-inner">
-      <p class="eyebrow reveal">Dublin, Ireland · Open to Data Engineer / Platform Engineer roles</p>
+      <p class="eyebrow reveal">Dublin, Ireland · Open to Software Engineer / Backend roles</p>
       <h1 class="hero-title reveal">
         Chandan Suthar
       </h1>
-      <p class="hero-role reveal">Data Engineer — Streaming &amp; Lakehouse Architectures</p>
+      <p class="hero-role reveal">Software Engineer — Backend &amp; Distributed Systems</p>
       <p class="hero-thesis reveal">
-        I build the pipelines that move data — Kafka, PySpark, Kubernetes, Airflow, dbt —
-        and I dig into the systems those pipelines run on. Same instinct either way:
+        I build backend services and the systems underneath them — concurrent Go services,
+        Python, Kafka, Kubernetes, PostgreSQL. Same instinct at every layer:
         find where it actually breaks, fix it, prove it with numbers.
       </p>
       <div class="hero-cta reveal">
@@ -77,7 +77,7 @@
         <g class="pipeline-node" style="--i:4" transform="translate(900,45)"><circle r="5"/></g>
       </svg>
       <div class="pipeline-labels">
-        <span>Kafka</span><span>PySpark</span><span>Iceberg</span><span>dbt</span><span>Warehouse</span>
+        <span>Client</span><span>Go API</span><span>Queue</span><span>Workers</span><span>Postgres</span>
       </div>
     </div>
   </section>
@@ -89,23 +89,22 @@
     <section class="section" id="about">
       <div class="section-inner">
         <div class="stage-marker" data-stage="about"><span></span></div>
-        <p class="section-label">01 · Ingest</p>
+        <p class="section-label">01 · Init</p>
         <h2 class="section-title">About</h2>
         <div class="about-grid reveal">
           <p class="about-text">
-            I'm a data engineer with 1.5+ years building production pipelines on GCP, Azure, and
-            Databricks — daily batch loads, streaming ingestion, and the on-call alerting that
-            makes them trustworthy. I finished an MSc in Data Science &amp; Analytics at
-            Munster Technological University in 2025, and I spend my own time building
-            infrastructure projects most job descriptions don't ask for: a Kafka-to-Iceberg
-            streaming lakehouse deployed two ways on Kubernetes, and — most recently — a pair
-            of Go services built from scratch to understand concurrency, profiling, and
-            distributed systems at the level below the frameworks I use daily.
+            I'm a software engineer who builds backend services in Go and Python. At Codeup I
+            designed and built RESTful APIs and Dockerized microservices, secured them with
+            JWT-based authentication, wrote a Cobra CLI on top of them, and kept the TeamCity
+            CI/CD pipelines green. I have a B.Tech in Computer Science Engineering and an MSc from
+            Munster Technological University (2025). On my own time I build systems from scratch:
+            a pair of concurrent Go services profiled down to the allocation level, and Kafka
+            deployed two ways on Kubernetes with infrastructure provisioned in Terraform.
           </p>
           <p class="about-text">
-            What ties it together is the same habit applied at every layer: measure before you
-            claim, verify against the actual data source rather than the log line describing it,
-            and document what broke, not just what shipped. Every project below has a number
+            What ties it together is the same engineering habit applied at every layer: measure
+            before you claim, verify against the actual source of truth rather than the log line
+            describing it, and document what broke, not just what shipped. Every project below has a number
             attached to it, and every number has a benchmark or a query behind it.
           </p>
         </div>
@@ -116,22 +115,23 @@
     <section class="section" id="experience">
       <div class="section-inner">
         <div class="stage-marker" data-stage="experience"><span></span></div>
-        <p class="section-label">02 · Process</p>
+        <p class="section-label">02 · Build</p>
         <h2 class="section-title">Experience</h2>
 
         <div class="exp-card reveal">
           <div class="exp-head">
             <div>
-              <h3>Data Engineer</h3>
-              <p class="exp-org">CodeUp · India</p>
+              <h3>Software Engineer</h3>
+              <p class="exp-org">Codeup · India · Remote</p>
             </div>
             <p class="exp-date">Aug 2023 — Aug 2024</p>
           </div>
           <ul class="exp-list">
-            <li>Built and maintained PySpark pipelines orchestrated with Apache Airflow, supporting daily batch loads across 3 business domains; added Slack/email alerting on job failures.</li>
-            <li>Led an Apache Iceberg migration (AWS S3 → Databricks Unity Catalog) serving 5 downstream analytics teams; reduced query latency <span class="metric">30%</span> on daily reporting (50+ queries/day).</li>
-            <li>Tuned Databricks cluster auto-scaling on GCP and contributed to serverless ETL workflows (BigQuery, Cloud Storage, Pub/Sub), reducing average job runtime and monthly compute spend.</li>
-            <li>Built 3 Tableau dashboards on Databricks SQL sources for sales and operations reporting, reducing reliance on manual Excel reports.</li>
+            <li>Designed and developed RESTful APIs and microservices, containerized with Docker, to streamline backend operations.</li>
+            <li>Built a command-line interface for the APIs using Cobra, giving users direct terminal access to backend functionality.</li>
+            <li>Implemented JWT-based authentication to secure the REST APIs.</li>
+            <li>Wrote unit and integration tests with Go's testing framework, reaching <span class="metric">~85%</span> test coverage.</li>
+            <li>Diagnosed and resolved TeamCity pipeline failures, keeping CI/CD workflows stable and reliable.</li>
           </ul>
         </div>
 
@@ -146,7 +146,6 @@
           <ul class="exp-list">
             <li>Built a Python monitoring script with structured logging and Slack/email alerts, cutting data-issue detection time from hours to under <span class="metric">15 min</span>.</li>
             <li>Tuned SQL queries against PostgreSQL by adding indexes and rewriting subqueries, cutting report generation time by roughly <span class="metric">80%</span>.</li>
-            <li>Built 4 Power BI dashboards covering revenue, retention, and operational KPIs, replacing manual spreadsheet reports.</li>
             <li>Wrote Bash scripts to automate log rotation and routine handling on Linux servers.</li>
           </ul>
         </div>
@@ -157,52 +156,11 @@
     <section class="section" id="projects">
       <div class="section-inner">
         <div class="stage-marker" data-stage="projects"><span></span></div>
-        <p class="section-label">03 · Transform</p>
+        <p class="section-label">03 · Ship</p>
         <h2 class="section-title">Projects</h2>
-        <p class="section-sub reveal">Built end to end, benchmarked, and documented — including what broke.</p>
+        <p class="section-sub reveal">Designed, built, load-tested, and documented — including what broke.</p>
 
         <div class="project-grid">
-
-          <article class="project-card reveal">
-            <div class="project-head">
-              <h3>E-Commerce Real-Time Lakehouse</h3>
-              <a href="https://github.com/FiRe088/ecommerce-lakehouse-pipeline" target="_blank" rel="noopener" class="project-link" aria-label="View on GitHub">→</a>
-            </div>
-            <p class="project-date">Jun 2025 — Jul 2026</p>
-            <p class="project-desc">
-              A streaming lakehouse end to end: Kafka producers → PySpark Structured Streaming →
-              Apache Iceberg (Bronze/Silver/Gold) → dbt Core models with automated data-quality
-              tests. Deployed Kafka and Airflow on Kubernetes two ways — hand-rolled StatefulSets
-              and a production-style Helm chart with live git-sync DAG delivery.
-            </p>
-            <ul class="project-bullets">
-              <li>Diagnosed and documented <span class="metric">14</span> real infrastructure issues (cross-OS Iceberg metadata portability, K8s networking gaps, Helm schema drift) in a public engineering log</li>
-              <li>Provisioned AWS S3 via Terraform with least-privilege IAM; validated cross-engine Iceberg portability against DuckDB independently</li>
-            </ul>
-            <div class="project-tags">
-              <span>Kafka</span><span>PySpark</span><span>Iceberg</span><span>dbt Core</span><span>Kubernetes</span><span>Terraform</span>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-head">
-              <h3>Irish Grid Carbon Intensity Tracker</h3>
-              <a href="https://github.com/FiRe088/ireland-grid-carbon-tracker" target="_blank" rel="noopener" class="project-link" aria-label="View on GitHub">→</a>
-            </div>
-            <p class="project-date">Apr 2026 — May 2026</p>
-            <p class="project-desc">
-              A local-to-cloud pipeline ingesting real-time Irish wind generation data. Dockerized
-              Medallion architecture (Bronze → Silver → Gold), then migrated to GCP with a
-              BigQuery star schema.
-            </p>
-            <ul class="project-bullets">
-              <li>Implemented idempotent upserts in both PostgreSQL and BigQuery</li>
-              <li>Automated Pandera data-quality tests via GitHub Actions CI on every push</li>
-            </ul>
-            <div class="project-tags">
-              <span>PySpark</span><span>Airflow</span><span>GCP · BigQuery</span><span>Docker</span><span>Pandera</span><span>GitHub Actions</span>
-            </div>
-          </article>
 
           <article class="project-card reveal project-card-featured">
             <div class="project-head">
@@ -228,6 +186,27 @@
             </div>
           </article>
 
+          <article class="project-card reveal">
+            <div class="project-head">
+              <h3>Event-Streaming Platform on Kubernetes</h3>
+              <a href="https://github.com/FiRe088/ecommerce-lakehouse-pipeline" target="_blank" rel="noopener" class="project-link" aria-label="View on GitHub">→</a>
+            </div>
+            <p class="project-date">Jun 2025 — Jul 2026</p>
+            <p class="project-desc">
+              A real-time e-commerce event system: Kafka producers streaming into stateful
+              consumers, with the whole stack deployed on Kubernetes two ways — hand-rolled
+              StatefulSets, then a production-style Helm chart with live git-sync delivery of
+              workflow code. Cloud infrastructure provisioned as code with Terraform.
+            </p>
+            <ul class="project-bullets">
+              <li>Diagnosed and documented <span class="metric">14</span> real infrastructure issues (cross-OS storage metadata portability, K8s networking gaps, Helm schema drift) in a public engineering log</li>
+              <li>Provisioned AWS S3 via Terraform with least-privilege IAM policies</li>
+            </ul>
+            <div class="project-tags">
+              <span>Kafka</span><span>Kubernetes</span><span>Helm</span><span>StatefulSets</span><span>Terraform</span><span>AWS</span>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -236,38 +215,38 @@
     <section class="section" id="skills">
       <div class="section-inner">
         <div class="stage-marker" data-stage="skills"><span></span></div>
-        <p class="section-label">04 · Serve</p>
+        <p class="section-label">04 · Stack</p>
         <h2 class="section-title">Skills</h2>
 
         <div class="skills-grid reveal">
           <div class="skill-group">
             <h3>Languages</h3>
             <div class="tag-row">
-              <span>Python</span><span>Go</span><span>R</span><span>SQL</span><span>Shell / Bash</span>
+              <span>Go</span><span>Python</span><span>SQL</span><span>Shell / Bash</span>
             </div>
           </div>
           <div class="skill-group">
-            <h3>Data Engineering &amp; Orchestration</h3>
+            <h3>Backend &amp; Systems</h3>
             <div class="tag-row">
-              <span>PySpark</span><span>Apache Kafka</span><span>Apache Airflow</span><span>Apache Iceberg</span><span>dbt Core</span><span>Databricks</span><span>ETL / ELT</span><span>Spark SQL</span>
+              <span>RESTful APIs</span><span>Microservices</span><span>JWT authentication</span><span>CLI tooling (Cobra)</span><span>Concurrency (goroutines / channels)</span><span>Worker pools &amp; backpressure</span><span>Graceful shutdown</span><span>Apache Kafka</span>
             </div>
           </div>
           <div class="skill-group">
-            <h3>Cloud &amp; Infrastructure</h3>
+            <h3>Testing, Performance &amp; Observability</h3>
             <div class="tag-row">
-              <span>GCP · BigQuery / Pub/Sub / GCS</span><span>Azure · Data Factory / Blob / Event Hub</span><span>AWS · S3 / EC2</span><span>Docker</span><span>Kubernetes</span><span>Terraform</span>
+              <span>Unit &amp; integration testing (Go)</span><span>Load testing</span><span>Profiling (pprof)</span><span>Grafana</span><span>Structured logging &amp; alerting</span>
             </div>
           </div>
           <div class="skill-group">
-            <h3>Databases &amp; BI</h3>
+            <h3>Cloud, Infrastructure &amp; DevOps</h3>
             <div class="tag-row">
-              <span>PostgreSQL</span><span>MySQL</span><span>Tableau</span><span>Power BI</span>
+              <span>Docker</span><span>Kubernetes</span><span>Helm</span><span>Terraform</span><span>CI/CD · TeamCity / GitHub Actions</span><span>AWS · S3 / EC2</span><span>GCP</span><span>Azure</span><span>Linux</span><span>Git</span>
             </div>
           </div>
           <div class="skill-group">
-            <h3>Systems &amp; Backend</h3>
+            <h3>Databases</h3>
             <div class="tag-row">
-              <span>Concurrency (goroutines / channels)</span><span>Profiling (pprof)</span><span>Linux</span><span>Distributed logging &amp; monitoring design</span>
+              <span>PostgreSQL</span><span>MySQL</span>
             </div>
           </div>
         </div>
@@ -278,7 +257,7 @@
     <section class="section" id="education">
       <div class="section-inner">
         <div class="stage-marker" data-stage="education"><span></span></div>
-        <p class="section-label">05 · Sink</p>
+        <p class="section-label">05 · Foundations</p>
         <h2 class="section-title">Education</h2>
 
         <div class="edu-card reveal">
@@ -410,7 +389,7 @@
     <div class="contact-inner reveal">
       <p class="section-label">Contact</p>
       <h2 class="contact-title">Let's talk shop.</h2>
-      <p class="contact-sub">Streaming architectures, Kubernetes, or why a data pipeline is really just a distributed systems problem wearing a different hat — always happy to get into it.</p>
+      <p class="contact-sub">Backend services, concurrency, Kubernetes, or why most performance problems live somewhere other than where you first look — always happy to get into it.</p>
       <div class="contact-links">
         <a href="mailto:chandan.suthar.ie@gmail.com" class="btn btn-primary">chandan.suthar.ie@gmail.com</a>
         <a href="https://www.linkedin.com/in/chandan088" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
